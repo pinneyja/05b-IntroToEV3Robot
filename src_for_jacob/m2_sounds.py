@@ -2,8 +2,8 @@
 An opportunity to explore how to make an EV3 Robot make sounds.
 
 Authors: Dave Fisher, David Mutchler, Vibha Alangar,
-their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+their colleagues, and Jacob Pinney.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 # ------------------------------------------------------------------------------
 # TODO: 2.
@@ -11,7 +11,16 @@ their colleagues, and PUT_YOUR_NAME_HERE.
 #   make sounds in various ways:  Beep, Tone, Speech, Song.
 # ------------------------------------------------------------------------------
 
+import rosebotics as rb
+
+
 def main():
+    beeboop = rb.Beep()
+    beeboop.play()
+
+    speeboop = rb.Speech("Luke, I I I I I I I am your your your your your father")
+    speeboop.play()
+
     make_sounds()
 
 
@@ -33,3 +42,9 @@ def make_sounds():
         (466.16, 25, 100), (440, 25, 100), (466.16, 50, 400), (311.13, 25, 200),
         (392, 350, 100), (311.13, 250, 100), (466.16, 25, 100), (392.00, 300, 150),
         (311.13, 250, 100), (466.16, 25, 100), (392, 700)]
+    if False:
+        song = rb.Song(fun_song)
+        song.play()
+
+
+main()
